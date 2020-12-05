@@ -1,71 +1,92 @@
-#ft{
+.footer-module li{
+  color: #fff;
+  line-height: 22px;
+}
+.footer-module .ft__container p{
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 0;
+  font-family: Open Sans,Arial,sans-serif;
+}
+.footer-module li {
+  margin-bottom: 0px;
+}
+@media only screen and (max-width: 767px){
+.footer-module h3 {
+  text-align: left;
+}
+}
+
+.footer-module #ft{
 	background: var(--blue-ocean);
 	color: #fff;
 }
 /*-------------------*/
 /*Menu*/
 /*-------------------*/
-.ft__grid{
+.ft .ft__grid{
 	display: grid;
 	grid-template-columns: repeat(5, 1fr);
 	grid-gap: 3%;
 	width: 90%;
     max-width: 1250px;
     margin: 0 auto;
-    padding: 45px 0;
+    padding: 46px 0;
     list-style: none;
 }
-#ft__logo{
+.ft #ft__logo{
 	width: 100%;
 	margin-top: 20px;
 	max-width: 220px;
 }
-.ft__title{
-	font-size: 1.8rem;
-    font-weight: 500;
+.ft .ft__title{
+	/*font-size: 1.8rem;
+    font-weight: 500;*/
     margin-bottom: 8px;
+    font-size:18px; 
 }
-.ft__list{
+.ft .ft__list{
 	list-style: none;
 }
-.ft__link{
+.ft .ft__link{
 	text-decoration: none;
 	color: #fff;
-	font-size: 1.6rem;
+	/*font-size: 1.6rem;
 	font-weight: 300;
-	line-height: 1.44;
+	line-height: 1.44;*/
+  font-size: 16px;
 }
 /*-------------------*/
 /*copyright*/
 /*-------------------*/
-footer{
+.ft footer{
 	background: #000;
-    padding: 20px 0 10px;
+    padding: 14px 0 5px;
 
 }
-.ft__container{
+.ft .ft__container{
 	display: flex;
 	justify-content: space-between;
-	width: 80%;
+	width: 90%;
     max-width: 1080px;
     margin: auto;
 }
-.ft__copyright{
-	font-size: 1.5rem;	
-    line-height: 1.7em;
+.ft .ft__copyright{
+	/*font-size: 1.5rem;	
+    line-height: 1.7em;*/
     font-weight: 400;
     letter-spacing: .5px;
 }
-.ft__icons{
+.ft .ft__icons{
 	font-size: 25px;
 }
-.ft__icons a{
+.ft .ft__icons a{
 	color: #fff;
 }
-.ft__icons a:last-child{
+.ft .ft__icons a:last-child{
 	margin-left: 20px
 }
-.ft__icons a:hover{
+.ft .ft__icons a:hover{
 	color: #B2B2B2;
 }
 
@@ -73,38 +94,38 @@ footer{
 	/*-------------------*/
 	/*Menu*/
 	/*-------------------*/
-	.ft__grid{
+	.ft .ft__grid{
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 5%;
 		grid-row-gap: 30px;
 
 	}
-	.ft__grid > li:first-child{
+	.ft .ft__grid > li:first-child{
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
-	#ft__logo{
+	.ft #ft__logo{
 		margin-top: 0px;
 	}
 	/*-------------------*/
 	/*copyright*/
 	/*-------------------*/
-	.ft__container{
+	.ft .ft__container{
 		display: flex;
 		justify-content: initial;
 		align-items: center;
 		flex-flow: column-reverse;
 	}
-	.ft__copyright{
+	.ft .ft__copyright{
 		text-align: center;
 	}
-	.ft__icons{
+	.ft .ft__icons{
 		margin-bottom: 5px;
 	}
 }
 @media screen and (max-width: 480px) {
-	.ft__grid{
+	.ft .ft__grid{
 		grid-template-columns: repeat(1, 1fr);
 	}
 }
