@@ -1,0 +1,29 @@
+.hd__menu-secondary,
+.hd__search form{
+    display: none;
+}
+
+#hd .hd__wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ---------------- */
+/* Generals */
+/* ---------------- */
+.hd__menu,
+.hd__more{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+/* ---------------- */
+/* MENU */
+/* ---------------- */
+
+/* ---------------- */
+/* Logo */
+/* ---------------- */
+#hd__logo img{
+    width: 150px;
+}
