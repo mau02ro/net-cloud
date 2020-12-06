@@ -1,3 +1,6 @@
+body{
+    background-color: coral;
+}
 .hd__menu-secondary,
 .hd__search form{
     display: none;
@@ -15,15 +18,126 @@
 .hd__more{
     display: flex;
     align-items: center;
-    list-style: none;
 }
+
+.hd__menu-link{
+    text-decoration: none;
+    color: #000000;
+}
+
+#hd{
+    padding-top: 20px;
+    padding-bottom: 8px;
+    position: relative;
+    background: #ffffff;
+}
+#hd::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background-color: var(--blue-dark);
+}
+.hd__wrapper{
+    width: 100%;
+    max-width: 1315px;
+    margin: 0 auto;
+}
+/* ---------------- */
 /* ---------------- */
 /* MENU */
 /* ---------------- */
+/* ---------------- */
+.hd__menu{
+    list-style: none;
+}
+.hd__menu > li{
+    margin-right: 26px;
+}
+.hd__menu > li:last-child{
+    margin-right: 0;
+}
+/* ---------------- */
+/* Level 1 */
+.hd__item-primary{
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+}
+.hd__item-primary i{
+    color: var(--orange);
+    margin-left: 5px;
+}
 
+/* ---------------- */
 /* ---------------- */
 /* Logo */
 /* ---------------- */
+/* ---------------- */
 #hd__logo img{
-    width: 150px;
+    width: 158px;
+}
+
+
+/* ---------------- */
+/* ---------------- */
+/* Logo */
+/* ---------------- */
+/* ---------------- */
+.hd__more{
+    justify-content: baseline;
+}
+.hd__more > div{
+    margin-right: 30px;
+}
+.hd__more > div:last-child{
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+/* ---------------- */
+/* Contact */
+.hd__contact-item{
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 700;
+    color: #000000;
+    margin-right: 18px;
+}
+.hd__contact-item > i{
+    color: var(--orange);
+    margin-right: 5px;
+}
+.hd__contact-btn{
+    background: var(--orange);
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: 400;
+    padding: 11px 17px;
+}
+
+/* ---------------- */
+/* Contact */
+.hd__social-item{
+    color: var(--blue-dark);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 14px;
+}
+.hd__social-item:first-child{
+    margin-right: 25px;
+}
+
+/* ---------------- */
+/* Search */
+#hd__icon-search{
+    color: var(--blue-dark);
+    font-size: 20px;
+    line-height: 14px;
+    transform: rotateZ(90deg);
 }
