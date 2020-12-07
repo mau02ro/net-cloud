@@ -19,6 +19,9 @@ window.addEventListener("resize", () => {
   $(".hd__menu-secondary").slideUp("fast");
   $(".hd__menu-tertiary").slideUp("fast");
 
+  $(".hd__label-menu").removeClass("hd__label-menu-active");
+  $(".hd__label-subMenu").removeClass("hd__label-subMenu-active");
+
   hd_show_Header(false);
 })
 
