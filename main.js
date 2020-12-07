@@ -15,7 +15,7 @@ window.addEventListener("load", () => {
   btn_OpenClose_menu.addEventListener("click", hd_show_Header); 
 })
 
-function validationWidth(value = 1025){
+function validationWidth(value = 1500){
   if($(document).width() > value){ 
     return true;
   }else{ 
