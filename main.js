@@ -15,7 +15,14 @@ window.addEventListener("load", () => {
   btn_OpenClose_menu.addEventListener("click", hd_show_Header); 
 })
 
-function validationWidth(value = 1500){
+window.addEventListener("resize", () => {
+  $(".hd__menu-secondary").slideUp("fast");
+  $(".hd__menu-tertiary").slideUp("fast");
+
+  hd_show_Header(false);
+})
+
+function validationWidth(value = 1025){
   if($(document).width() > value){ 
     return true;
   }else{ 
@@ -28,11 +35,11 @@ function validationWidth(value = 1500){
 /* Show Header */
 /* ---------------- */
 /* ---------------- */
-function hd_show_Header() {
+function hd_show_Header(controller = true) {
   if(true){
     let width__app = $(document).width()
     
-    if(!hd__wrapper.classList.contains("show_header")){
+    if(!hd__wrapper.classList.contains("show_header") && controller){
       btn_OpenClose_menu.classList.add("change_style");
       hd__wrapper.classList.add("show_header");
 
