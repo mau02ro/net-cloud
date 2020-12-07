@@ -34,6 +34,7 @@ body {
 	right: 0;
 	height: 11px;
 	background-color: var(--blue-dark);
+	z-index: 10000;
 }
 
 #hd .hd__topMovile {
@@ -42,7 +43,7 @@ body {
 
 #hd #hd__wrapper {	
 	position: relative;
-	top: 0px;
+	transition: 5s;
 }
 #hd #hd__container {
 	display: flex;
@@ -306,17 +307,21 @@ body {
 }
 
 #hd__search-desktop{
+	background: transparent;
+	position: absolute;
+	top: -90px;
+	left: 0;
+	right: 0;
+	transition: .7s;
+	z-index: 2000;
+}
+.hd__search-desktop-wrapper{
 	width: 100%;
 	max-width: 1200px;
 	margin:0 auto;
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;
-	background: #ffffff;
-	background-color: red;
-	position: absolute;
-	top: -90px;
-	transition: .2s;
 }
 #hd__icon-close {
 	right: 0;
@@ -331,6 +336,48 @@ body {
 }
 #hd__search-desktop input:focus{
 	outline: none;
+}
+
+/* --------------------- */
+/* --------------------- */
+/* Animation Open Search*/
+.open_search{
+	top: 20px !important;
+}
+.hide_container{
+	animation: Mono .7s forwards;
+}
+.show_container{
+	animation: Mona .6s forwards;
+}
+@keyframes Mono{
+	0%{
+		opacity: 1;
+		top: 0;
+	}
+	50%{
+		opacity: 0.1;
+	}
+	100%{
+		opacity: 0;
+		top: 20px;
+		display: none;
+	}
+}
+@keyframes Mona{
+	0%{
+		opacity: 0;
+		top: 20px;
+		display: block;
+	}
+	50%{
+		opacity: 0.5;
+	}
+	100%{
+		opacity: 1;
+		top: 0;
+		display: block;
+	}
 }
 
 

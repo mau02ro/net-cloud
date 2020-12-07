@@ -126,6 +126,20 @@ $(".hd__label-subMenu").click(function (event) {
 /* Open Serch Destop */
 /* ---------------- */
 /* ---------------- */
+$("#hd__icon-search").click(function (event) {
+  $("#hd__search-desktop").addClass("open_search");
+  $("#hd__wrapper").addClass("hide_container");
+})
+$("#hd__icon-close").click(function (event) {
+  $("#hd__search-desktop").removeClass("open_search");
+  $("#hd__wrapper").removeClass("hide_container");
+
+  $("#hd__wrapper").addClass("show_container");
+
+  setTimeout(() => {
+    $("#hd__wrapper").removeClass("show_container");
+  }, 400)
+})
 // $("#hd__icon-search").click(function (event) {
 //   $("#hd__search-desktop").css("top", "20px");
 //   $("#hd__wrapper").addClass("hd__openSearch");
