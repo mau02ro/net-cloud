@@ -341,16 +341,16 @@ body {
 /* --------------------- */
 /* --------------------- */
 /* Animation Open Search*/
-.open_search{
+.hd__show-search{
 	top: 20px !important;
 }
-.hide_container{
-	animation: Mono .7s forwards;
+.hd__hide-container{
+	animation: hd_animation_hide .7s forwards;
 }
-.show_container{
-	animation: Mona .6s forwards;
+.hd__show-container{
+	animation: hd_animation_show .7s forwards;
 }
-@keyframes Mono{
+@keyframes hd_animation_hide{
 	0%{
 		opacity: 1;
 		top: 0;
@@ -364,14 +364,11 @@ body {
 		display: none;
 	}
 }
-@keyframes Mona{
+@keyframes hd_animation_show{
 	0%{
 		opacity: 0;
 		top: 20px;
 		display: block;
-	}
-	50%{
-		opacity: 0.5;
 	}
 	100%{
 		opacity: 1;

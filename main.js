@@ -35,6 +35,14 @@ window.addEventListener("resize", () => {
   hd__container.style.width = "auto";
   hd__search.style.width = "auto";
 
+  $("#hd__search-desktop").removeClass("hd__show-search");
+  $("#hd__wrapper")
+    .removeClass("hd__hide-container")
+    .addClass("hd__show-container");
+  setTimeout(() => {
+    $("#hd__wrapper").removeClass("hd__show-container");
+  }, 400)
+
   document.getElementsByTagName("body")[0].style.overflow = "auto";
 })
 
@@ -127,28 +135,15 @@ $(".hd__label-subMenu").click(function (event) {
 /* ---------------- */
 /* ---------------- */
 $("#hd__icon-search").click(function (event) {
-  $("#hd__search-desktop").addClass("open_search");
-  $("#hd__wrapper").addClass("hide_container");
+  $("#hd__search-desktop").addClass("hd__show-search");
+  $("#hd__wrapper").addClass("hd__hide-container");
 })
 $("#hd__icon-close").click(function (event) {
-  $("#hd__search-desktop").removeClass("open_search");
-  $("#hd__wrapper").removeClass("hide_container");
-
-  $("#hd__wrapper").addClass("show_container");
-
+  $("#hd__search-desktop").removeClass("hd__show-search");
+  $("#hd__wrapper")
+    .removeClass("hd__hide-container")
+    .addClass("hd__show-container");
   setTimeout(() => {
-    $("#hd__wrapper").removeClass("show_container");
+    $("#hd__wrapper").removeClass("hd__show-container");
   }, 400)
 })
-// $("#hd__icon-search").click(function (event) {
-//   $("#hd__search-desktop").css("top", "20px");
-//   $("#hd__wrapper").addClass("hd__openSearch");
-// })
-
-// $("#hd__icon-close").click(function (event) {
-//   $("#hd__search-desktop").slideUp("slow");
-//   $("#hd__wrapper").slideDown("slow");
-
-//   $("#hd__search-desktop").css("top", "-90px");
-//   $("#hd__wrapper").removeClass("hd__openSearch");
-// })
