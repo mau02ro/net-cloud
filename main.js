@@ -120,7 +120,7 @@ $(".hd__label-menu").click(function (event) {
     event.preventDefault();
 
     $(this).toggleClass("hd__label-menu-active");
-    $(this).siblings("ul").slideToggle();
+    $(this).siblings("ul").slideToggle("fast");
   }
 });
 $(".hd__label-subMenu").click(function (event) {
@@ -128,7 +128,7 @@ $(".hd__label-subMenu").click(function (event) {
     event.preventDefault();
 
     $(this).toggleClass("hd__label-subMenu-active");
-    $(this).siblings("ul").slideToggle();
+    $(this).siblings("ul").slideToggle("fast");
   }
 });
 
