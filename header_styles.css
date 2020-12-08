@@ -524,7 +524,7 @@ body {
 		flex-flow: column;
 		justify-content: flex-start;
 		background-color: #0B3A52;
-		padding-top: 0;
+		padding-top: 0 !important;
 	}
 
 	.hd__menu>li {
@@ -671,7 +671,7 @@ body {
 		white-space: nowrap;
 		width: inherit;
 		align-items: flex-start;
-		padding-top: 0;
+		padding-top: 0 !important;
 	}
 
 	.hd__more>div {
@@ -737,7 +737,7 @@ body {
 	#hd__search button {
 		position: absolute;
 		right: 30px;
-		background: #ffffff;
+		background: red;
 		border: none;
 		width: 40px;
 		height: 100%;
