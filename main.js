@@ -150,3 +150,15 @@ $("#hd__icon-close").click(function (event) {
     $("#hd__wrapper").removeClass("hd__show-container");
   }, 400)
 })
+
+window.addEventListener('scroll', function (e) {
+  if (!validationWidth(1499)) {
+    let y = window.scrollY;
+    console.log(y)
+    if (y > 25 && y != 0) {
+      $("#hd__wrapper").parent("section").addClass("minimizar");
+    } else if (y === 0) {
+      $("#hd__wrapper").parent("section").removeClass("minimizar");
+    }
+  }
+});

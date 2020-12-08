@@ -23,9 +23,10 @@ body {
 #hd {
 	padding-top: 20px;
 	background: #ffffff;
-	position: relative;
+	position: sticky;
+	top: 0;
+	transition: .2s;
 }
-
 #hd::after {
 	content: '';
 	position: absolute;
@@ -52,6 +53,7 @@ body {
 	max-width: 1289px;
 	margin: 0 auto;
 	padding-bottom: 7px;
+	transition: .5s;
 }
 
 .hd__openSearch{
@@ -59,7 +61,30 @@ body {
 	opacity: 0 !important;
 
 }
-
+.minimizar{
+	padding-top: 0px !important;
+}
+.minimizar #hd__logo{
+	padding-bottom: 18px;
+}
+.minimizar #hd__logo img {
+	height: 57px;
+	width: 99px;
+}
+.minimizar #hd__container{
+	max-width: 1235px !important;
+}
+.minimizar .hd__main{
+	height: 82px;
+}
+.minimizar #hd__container{
+	padding-bottom: 0 !important;
+}
+.minimizar .hd__menu > li > a, .minimizar .hd__more{
+	padding-bottom: 25px !important;
+	transition: 1.5s;
+	transition-delay: 3s;
+}
 /* ---------------- */
 /* ---------------- */
 /* MENU */
@@ -101,6 +126,7 @@ body {
 .hd__menu>li>a {
 	padding-bottom: 38px;
 	display: block;
+	transition: 2s;
 }
 
 @media screen and (min-width: 1500px) {
@@ -205,12 +231,17 @@ body {
 /* ---------------- */
 #hd__logo{
 	padding-right:8px;
+	transition: .8s;
+	height: 91px;
+	display: flex;
+	align-items: flex-end;
 }
 #hd__logo img {
 	height: 88px;
   width: 153px;
   padding-top: 3px;
-  padding-left: 3px;
+	padding-left: 3px;
+	transition: .5s;
 }
 
 
@@ -221,6 +252,7 @@ body {
 /* ---------------- */
 .hd__more {
 	padding-bottom: 36px;
+	transition: 2s;
 }
 
 .hd__more>div {
@@ -324,7 +356,7 @@ body {
 }
 .hd__search-desktop-wrapper{
 	width: 100%;
-	max-width: 1200px;
+	max-width: 1238px;
 	margin:0 auto;
 	display: flex;
 	flex-direction: row-reverse;
@@ -333,16 +365,28 @@ body {
 #hd__icon-close {
 	right: 0;
   top: 30px;
-  font-size: 25px;
+	font-size: 25px;
+	font-weight: 600;
 }
 #hd__search-desktop input{
-	width: 90%;
+	width: 95.5%;
   border: none;
   background: transparent;
 	height: 90px;
+	font-size: 14px;
+	font-weight: 400;
+	color: #000000;
+	font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+}
+#hd__search-desktop input::placeholder{
+	color: #000000;
+	font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
 }
 #hd__search-desktop input:focus{
 	outline: none;
+}
+#hd__search-desktop input::-ms-clear, #hd__search-desktop input::-webkit-search-cancel-button{
+  display: none;
 }
 
 /* --------------------- */
@@ -409,7 +453,7 @@ body {
 		right: 0;
 		height: calc(100vh - 70px);
 		max-height: calc(100vh - 70px);
-		width: 93%;
+		width: 100%;
 		max-width: 1025px;
 		overflow-y: auto;
 		overflow-x: hidden;
@@ -449,7 +493,7 @@ body {
 	}
 
 	#hd__container .hd__more .hd__contact-btn {
-		margin: 0px 14px;
+		margin: 2px 14px 0;
 	}
 
 	/* ---------------- */
@@ -641,7 +685,8 @@ body {
 		display: inline-block;
 		font-size: 15px;
 		line-height: 24px;
-		padding: 10px 17px !important;
+		padding: 12px 17px !important;
+		text-transform: initial;
 	}
 
 
@@ -656,6 +701,7 @@ body {
 	.hd__social-item {
 		display: inline-flex;
 		text-decoration: none;
+		color: #ffffff;
 	}
 
 	/* ---------------- */
@@ -674,13 +720,25 @@ body {
 		font-size: 15px;
 	}
 
-	#hd__search input {
+	
+	#hd__search input{
 		padding: 5px !important;
-		border: 1px solid #ccc;
 		max-width: 100%;
 		height: 35px;
 		width: 100%;
 		display: block;
+		border: none;
+		font-size: 14px;
+		font-weight: 400;
+		color: #000000;
+		font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+	}
+	#hd__search input::placeholder{
+		color: #000000;
+		font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+	}
+	#hd__search input:focus{
+		outline: none;
 	}
 
 	/* ---------------- */
@@ -699,7 +757,7 @@ body {
 		display: flex !important;
 		justify-content: space-between;
 		align-items: center;
-		width: 95%;
+		width: 95.9%;
 		margin: 0 auto;
 		height: 70px;
 	}
@@ -710,10 +768,12 @@ body {
 		line-height: 26px;
 		color: #ffffff;
 		text-decoration: none;
+		font-family: "Open Sans", Arial, sans-serif;
+		padding-bottom: 5px;
 	}
 
 	#hd__btnClose {
-		width: 40px;
+		width: 30px;
 		height: 33px;
 		position: relative;
 		transform: rotate(0deg);
@@ -724,7 +784,7 @@ body {
 	#hd__btnClose span {
 		display: block;
 		position: absolute;
-		height: 5px;
+		height: 4px;
 		width: 100%;
 		background: #ffffff;
 		border-radius: 5px;
@@ -773,7 +833,7 @@ body {
 
 	#hd__container .hd__menu>li>a,
 	#hd__container .hd__more a {
-		padding: 3px 14px;
+		padding: 3px 12px;
 	}
 
 	/* ---------------- */
@@ -804,5 +864,12 @@ body {
 	/* Level 3 */
 	.hd__menu-tertiary a {
 		padding: 3px 14px 3px 41px;
+	}
+
+	.hd__more>div {
+		padding-top: 3px;
+	}
+	#hd__container .hd__more .hd__contact-btn {
+    margin: 6px 14px 0;
 	}
 }
