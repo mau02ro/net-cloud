@@ -49,8 +49,9 @@ body {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
-	max-width: 1285px;
+	max-width: 1289px;
 	margin: 0 auto;
+	padding-bottom: 7px;
 }
 
 .hd__openSearch{
@@ -69,16 +70,13 @@ body {
 }
 
 .hd__menu>li {
-	padding-right: 30px;
-}
-.hd__menu>li:nth-child(2) {
-	padding-right: 26px;
+	padding-right: 28px;
 }
 .hd__menu>li:nth-child(3) {
-	padding-right: 26px;
+	padding-right: 25px;
 }
 .hd__menu>li:nth-child(4) {
-	padding-right: 24px;
+	padding-right: 25px;
 }
 .hd__menu>li:last-child {
 	padding-right: 0;
@@ -101,7 +99,7 @@ body {
 }
 
 .hd__menu>li>a {
-	padding-bottom: 35px;
+	padding-bottom: 38px;
 	display: block;
 }
 
@@ -209,7 +207,10 @@ body {
 	padding-right:8px;
 }
 #hd__logo img {
-	height: 85px;
+	height: 88px;
+  width: 153px;
+  padding-top: 3px;
+  padding-left: 3px;
 }
 
 
@@ -219,11 +220,12 @@ body {
 /* ---------------- */
 /* ---------------- */
 .hd__more {
-	padding-bottom: 35px;
+	padding-bottom: 36px;
 }
 
 .hd__more>div {
-	margin-right: 27px;
+	margin-right: 31px;
+  padding-bottom: 1px;
 }
 
 .hd__more>div:last-child {
@@ -239,17 +241,20 @@ body {
 	line-height: 14px;
 	font-weight: 700;
 	color: #000000;
-	margin-right: 18px;
+	margin-right: 21.8px;
 	transition: .2s;
 	transition-property: color;
 	text-transform: uppercase;
 }
-
+.hd__contact-item:nth-child(2){
+	margin-right: 20px;
+}
 .hd__contact-item>i {
 	color: var(--orange);
-	margin-right: 5px;
+	margin-right: 4px;
 	transition: .2s;
 	transition-property: color;
+	font-size: 12.5px;
 }
 
 .hd__contact-item:hover {
@@ -267,7 +272,7 @@ body {
 	font-size: 14px;
 	line-height: 14px;
 	font-weight: 400;
-	padding: 11px 17px;
+	padding: 11px 17.5px 12px;
 	transition: .2s;
 	text-transform: uppercase;
 }
@@ -277,7 +282,10 @@ body {
 }
 
 /* ---------------- */
-/* Contact */
+/* social */
+.hd__social{
+	margin-right: 24px !important;
+}
 .hd__social-item {
 	color: var(--blue-dark);
 	font-size: 20px;
@@ -289,7 +297,7 @@ body {
 	margin-right: 25px;
 	position: relative;
 	top: -2.5px;
-	font-size: 18px;
+	font-size: 15px;
 }
 
 /* ---------------- */
