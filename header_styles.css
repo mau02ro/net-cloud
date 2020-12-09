@@ -417,34 +417,34 @@ body {
 	}
 }
 
-.minimizar #hd__container{
+.reduce #hd__container{
 	padding-bottom: 0 !important;
 }
-.minimizar #hd__logo{
+.reduce #hd__logo{
 	height: 57px;
 }
-.minimizar #hd__logo img {
+.reduce #hd__logo img {
 	height: 57px;
 	width: 99px;
 }
-.minimizar .hd__menu > li > a {
+.reduce .hd__menu > li > a {
 	padding-bottom: 0;
 }
-.minimizar .hd__menu{
+.reduce .hd__menu{
 	padding-top: 23px;
 }
-.minimizar .hd__more{
+.reduce .hd__more{
 	padding-top: 20px;
 }
-.minimizar #hd__search-desktop input{
+.reduce #hd__search-desktop input{
 	height: 63px !important;
 }
-.minimizar .hd__search-desktop-wrapper{
+.reduce .hd__search-desktop-wrapper{
 	min-width: 1235px;
 }
 
 
-@media screen and (max-width: 1499px) {
+@media screen and (max-width: 1375px) {
 	#hd {
 		padding-top: 0;
 		background-color: #0B3A52;
@@ -454,7 +454,9 @@ body {
 			Arial,
 			sans-serif !important;
 	}
-
+	#hd li, #hd h3, #hd a, #hd p{
+		text-align: initial !important;
+	}
 	#hd::after {
 		display: none;
 	}

@@ -116,7 +116,7 @@ function hd_show_Header() {
 /* ---------------- */
 /* ---------------- */
 $(".hd__label-menu").click(function (event) {
-  if (!validationWidth(1800)) {
+  if (!validationWidth(1375)) {
     event.preventDefault();
 
     $(this).toggleClass("hd__label-menu-active");
@@ -124,7 +124,7 @@ $(".hd__label-menu").click(function (event) {
   }
 });
 $(".hd__label-subMenu").click(function (event) {
-  if (!validationWidth(1800)) {
+  if (!validationWidth(1375)) {
     event.preventDefault();
 
     $(this).toggleClass("hd__label-subMenu-active");
@@ -153,15 +153,20 @@ $("#hd__icon-close").click(function (event) {
   }, 400)
 })
 
+/* ---------------- */
+/* ---------------- */
+/* Reduce */
+/* ---------------- */
+/* ---------------- */
 window.addEventListener('scroll', function (e) {
-  console.log(validationWidth(1499))
+  console.log(validationWidth(1375))
   if (validationWidth(1400)) {
     let y = window.scrollY;
     console.log(y)
     if (y > 25 && y != 0) {
-      $("#hd__wrapper").parent("section").addClass("minimizar");
+      $("#hd__wrapper").parent("section").addClass("reduce");
     } else if (y === 0) {
-      $("#hd__wrapper").parent("section").removeClass("minimizar");
+      $("#hd__wrapper").parent("section").removeClass("reduce");
     }
   }
 });
