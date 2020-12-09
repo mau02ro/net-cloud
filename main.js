@@ -159,8 +159,7 @@ $("#hd__icon-close").click(function (event) {
 /* ---------------- */
 /* ---------------- */
 window.addEventListener('scroll', function (e) {
-  console.log(validationWidth(1375))
-  if (validationWidth(1400)) {
+  if (validationWidth(1375)) {
     let y = window.scrollY;
     console.log(y)
     if (y > 25 && y != 0) {
