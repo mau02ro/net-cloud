@@ -20,6 +20,10 @@ body {
 	color: #000000;
 }
 
+#hd li, #hd h3, #hd a, #hd p{
+	text-align: initial !important;
+}
+
 #hd {
 	padding-top: 20px;
 	background: #ffffff;
@@ -453,9 +457,6 @@ body {
 		font-family: "Open Sans",
 			Arial,
 			sans-serif !important;
-	}
-	#hd li, #hd h3, #hd a, #hd p{
-		text-align: initial !important;
 	}
 	#hd::after {
 		display: none;
