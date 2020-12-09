@@ -1,6 +1,10 @@
 body {
 	background-color: coral;
 }
+.header-container-wrapper{
+	position: sticky;
+	top: 0;
+}
 
 .hd__menu-secondary,
 .hd__search form {
@@ -234,7 +238,7 @@ body {
 /* ---------------- */
 /* ---------------- */
 .hd__more {
-	padding-top: 37px;
+	padding-top: 30px;
 	transition: .5s;
 }
 
@@ -287,7 +291,7 @@ body {
 	font-size: 14px;
 	line-height: 14px;
 	font-weight: 400;
-	padding: 11px 17.5px 12px;
+	padding: 12.5px 17.5px 12px;
 	transition: .2s;
 	text-transform: uppercase;
 }
@@ -426,6 +430,7 @@ body {
 }
 .reduce #hd__logo{
 	height: 57px;
+	margin: 0 20px 0 17px;
 }
 .reduce #hd__logo img {
 	height: 57px;
@@ -438,7 +443,7 @@ body {
 	padding-top: 23px;
 }
 .reduce .hd__more{
-	padding-top: 20px;
+	padding-top: 14px;
 }
 .reduce #hd__search-desktop input{
 	height: 63px !important;
