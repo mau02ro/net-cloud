@@ -13,7 +13,23 @@ window.addEventListener("load", () => {
   hd__search = document.getElementById("hd__search");
 
   btn_OpenClose_menu.addEventListener("click", hd_show_Header);
-})
+
+  change_icon();
+});
+
+function change_icon() {
+  const icons = $(".hd__item-primary i");
+  console.log(icons);
+  if (validationWidth()) {
+    Array.prototype.forEach.call(icons, (element) => {
+      element.className = "fas fa-angle-down";
+    });
+  } else {
+    Array.prototype.forEach.call(icons, (element) => {
+      element.className = "fas fa-caret-down";
+    });
+  }
+}
 
 window.addEventListener("resize", () => {
   $(".hd__menu-secondary").css("display", "");
@@ -21,7 +37,6 @@ window.addEventListener("resize", () => {
 
   $(".hd__label-menu").removeClass("hd__label-menu-active");
   $(".hd__label-subMenu").removeClass("hd__label-subMenu-active");
-
 
   if (!validationWidth()) {
     $("#hd__search-desktop").slideUp("fast");
@@ -41,19 +56,21 @@ window.addEventListener("resize", () => {
     .addClass("hd__show-container");
   setTimeout(() => {
     $("#hd__wrapper").removeClass("hd__show-container");
-  }, 400)
+  }, 400);
 
   document.getElementsByTagName("body")[0].style.overflow = "auto";
   document.getElementsByTagName("body")[0].style.position = "initial";
-})
+
+  change_icon();
+});
 
 function validationWidth(value = 1025) {
-  let wth = $(document).width()
+  let wth = $(document).width();
   if (wth > value) {
     return true;
   } else {
     return false;
-  };
+  }
 }
 
 /* ---------------- */
@@ -87,25 +104,29 @@ function hd_show_Header() {
 
       setTimeout(() => {
         hd__wrapper.style.width = `${width}px`;
-      }, 0)
+      }, 0);
     } else {
       hd__wrapper.style.width = "0px";
       btn_OpenClose_menu.classList.remove("change_style");
 
-      hd__wrapper.addEventListener("transitionend", () => {
-        hd__wrapper.classList.remove("show_header");
-        hd__container.style.width = "auto";
-        hd__search.style.width = "auto";
+      hd__wrapper.addEventListener(
+        "transitionend",
+        () => {
+          hd__wrapper.classList.remove("show_header");
+          hd__container.style.width = "auto";
+          hd__search.style.width = "auto";
 
-        $(".hd__menu-secondary").css("display", "");
-        $(".hd__menu-tertiary").css("display", "");
+          $(".hd__menu-secondary").css("display", "");
+          $(".hd__menu-tertiary").css("display", "");
 
-        $(".hd__label-menu").removeClass("hd__label-menu-active");
-        $(".hd__label-subMenu").removeClass("hd__label-subMenu-active");
+          $(".hd__label-menu").removeClass("hd__label-menu-active");
+          $(".hd__label-subMenu").removeClass("hd__label-subMenu-active");
 
-        document.getElementsByTagName("body")[0].style.overflow = "auto";
-        document.getElementsByTagName("body")[0].style.position = "initial";
-      }, { once: true });
+          document.getElementsByTagName("body")[0].style.overflow = "auto";
+          document.getElementsByTagName("body")[0].style.position = "initial";
+        },
+        { once: true }
+      );
     }
   }
 }
@@ -132,7 +153,6 @@ $(".hd__label-subMenu").click(function (event) {
   }
 });
 
-
 /* ---------------- */
 /* ---------------- */
 /* Open Serch Destop */
@@ -142,7 +162,7 @@ $("#hd__icon-search").click(function (event) {
   event.preventDefault();
   $("#hd__search-desktop").addClass("hd__show-search");
   $("#hd__wrapper").addClass("hd__hide-container");
-})
+});
 $("#hd__icon-close").click(function (event) {
   $("#hd__search-desktop").removeClass("hd__show-search");
   $("#hd__wrapper")
@@ -150,18 +170,18 @@ $("#hd__icon-close").click(function (event) {
     .addClass("hd__show-container");
   setTimeout(() => {
     $("#hd__wrapper").removeClass("hd__show-container");
-  }, 400)
-})
+  }, 400);
+});
 
 /* ---------------- */
 /* ---------------- */
 /* Reduce */
 /* ---------------- */
 /* ---------------- */
-window.addEventListener('scroll', function (e) {
+window.addEventListener("scroll", function (e) {
   if (validationWidth(1375)) {
     let y = window.scrollY;
-    console.log(y)
+    console.log(y);
     if (y > 25 && y != 0) {
       $("#hd__wrapper").parent("section").addClass("reduce");
     } else if (y === 0) {
